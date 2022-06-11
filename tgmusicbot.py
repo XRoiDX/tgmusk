@@ -187,7 +187,7 @@ async def _upload_audio(message: Message, info_dict, audio_file):
     title = info_dict['title']
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
-    performer = info_dict['uploader']
+    performer = f"[𝐌𝐮𝐒𝐢𝐜𝐗𝐏𝐫𝐄𝐬𝐬]"
     await message.reply_audio(audio_file,
                               caption=caption,
                               duration=duration,
