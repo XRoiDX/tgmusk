@@ -123,9 +123,9 @@ async def _fetch_and_send_music(message: Message):
         # send a link as a reply to bypass Music category check
         if not message.reply_to_message \
                 and _youtube_video_not_music(info_dict):
-            inform = ("This video is not under Music category, "
-                      "you can resend the link as a reply "
-                      "to force download it")
+            inform = ("𝖳𝗁𝗂𝗌 𝖵𝗂𝖽𝖾𝗈 𝖨𝗌 𝖭𝗈𝗍 𝖴𝗇𝖽𝖾𝗋 𝖬𝗎𝗌𝗂𝖼 𝖢𝖺𝗍𝖾𝗀𝗈𝗋𝗒 😐 "
+                      "𝖸𝗈𝗎 𝖢𝖺𝗇 𝖱𝖾𝗌𝖾𝗇𝖽 𝖳𝗁𝖾 𝖫𝗂𝗇𝗄 𝖠𝗌 𝖠 𝖱𝖾𝗉𝗅𝗒 "
+                      "𝖳𝗈 𝖥𝗈𝗋𝖼𝖾 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖨𝗍)
             await _reply_and_delete_later(message, inform,
                                           DELAY_DELETE_INFORM)
             return
