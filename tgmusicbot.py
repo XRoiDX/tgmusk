@@ -131,13 +131,13 @@ async def _fetch_and_send_music(message: Message):
             return
         if info_dict['duration'] > MUSIC_MAX_LENGTH:
             readable_max_length = str(timedelta(seconds=MUSIC_MAX_LENGTH))
-            inform = ("This won't be downloaded because its audio length is "
-                      "longer than the limit `{}` which is set by the bot"
+            inform = ("𝖳𝗁𝗂𝗌 𝖶𝗈𝗇'𝗍 𝖡𝖾 𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽 𝖻𝖾𝖼𝖺𝗎𝗌𝖾 𝗂𝗍𝗌 𝖺𝗎𝖽𝗂𝗈 𝗅𝖾𝗇𝗀𝗍𝗁 𝗂𝗌 "
+                      "𝗅𝗈𝗇𝗀𝖾𝗋 𝗍𝗁𝖺𝗇 𝗍𝗁𝖾 𝗅𝗂𝗆𝗂𝗍 `{}` 𝗐𝗁𝗂𝖼𝗁 𝗂𝗌 𝗌𝖾𝗍 𝖻𝗒 𝗍𝗁𝖾 𝖻𝗈𝗍"
                       .format(readable_max_length))
             await _reply_and_delete_later(message, inform,
                                           DELAY_DELETE_INFORM)
             return
-        d_status = await message.reply_text("Downloading...", quote=True,
+        d_status = await message.reply_text("𝖣𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝖦...😁", quote=True,
                                             disable_notification=True)
         ydl.process_info(info_dict)
         audio_file = ydl.prepare_filename(info_dict)
